@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Nautubone - Udobnost za vaše zglobove</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="lp-sticky">
+  Posebna ponuda: <span id="price-old-value-sticky"></span> sada <span id="price-new-value-sticky"></span> • Plaćanje pri dostavi
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-col-left">
+    <h1><span class="produto-nome destaque">Nautubone</span> – udobnost za vaše zglobove, bez čekanja</h1>
+    <p class="sub">Gel koji djeluje izravno na područje nelagode: smanjuje ukočenost, podržava pokretljivost i vraća vam radost svakodnevnih aktivnosti.</p>
+
+    <ul class="beneficios">
+      <li>✓ Smanjuje osjećaj ukočenosti u zglobovima</li>
+      <li>✓ Podržava pokretljivost koljena, ramena i leđa</li>
+      <li>✓ Sastav na bazi prirodnih biljnih ekstrakata</li>
+      <li>✓ Brzo se upija, ne ostavlja masne tragove</li>
+      <li>✓ Pogodan za svakodnevnu primjenu</li>
+    </ul>
+
+    <div class="quick-facts">
+      <div><strong>93%</strong><span>korisnika prijavljuje veću udobnost</span></div>
+      <div><strong>10.000+</strong><span>zadovoljnih kupaca</span></div>
+      <div><strong>Testirano</strong><span>dermatološki</span></div>
+    </div>
+  </div>
+
+  <div class="hero-col-right">
+    <div class="oferta-card">
+      <div id="price-old-value"></div>
+      <div id="price-new-value"></div>
+      <div id="price-discount-value"></div>
+    </div>
+    <img class="product-img-front" src="img/nautubone_front.webp" alt="Nautubone gel" style="max-width:260px;margin:16px auto 0;">
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<div class="form-container" id="formulario-oferta">
+  <div class="form-two-columns">
+    <div class="left-column" style="text-align:center;">
+      <div class="form-badge" id="form-badge"></div>
+      <h2 class="form-title" id="form-title"></h2>
+      <p class="form-subtitle" id="form-subtitle"></p>
+      <img class="product-img-front" src="img/nautubone_front.webp" alt="Nautubone gel" style="max-width:200px;margin:0 auto;">
+    </div>
+
+    <div class="right-column">
+      <div class="form-wrapper">
+        <form id="order_form" method="post">
+
+          <div class="form-group">
+            <label class="form-label" id="label-pais" for="country_code_selector"></label>
+            <select class="form-input" id="country_code_selector" name="country" required>
+              <option id="pais-option" value="" selected></option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" id="label-nome" for="label_name"></label>
+            <input class="form-input" id="label_name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" id="label-telefone" for="label_phone"></label>
+            <div class="phone-group">
+              <span class="phone-ddi" id="phone-ddi"></span>
+              <input class="form-input" id="label_phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+            <small class="form-help" id="ajuda-telefone"></small>
+          </div>
+
+          <button type="submit" class="cta-button"><span id="cta-button-text"></span></button>
+        </form>
+
+        <div class="payment-info">
+          <p id="payment-info-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MECANISMO -->
+<section class="section">
+  <h2>Kako <span class="produto-nome">Nautubone</span> djeluje</h2>
+  <p class="lead">Formula kombinira biljne ekstrakte poznate po umirujućem djelovanju na zglobove i mišiće, uz brzu apsorpciju kroz kožu.</p>
+  <div class="grid-cards">
+    <div class="card-simple">
+      <img src="img/htu-item1.webp" alt="Nanošenje gela" style="max-width:90px;margin:0 auto 10px;">
+      <strong>1. Nanošenje</strong><p>Mala količina gela (veličine novčića) nanosi se na zahvaćeno područje.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/htu-item2.webp" alt="Masaža gela" style="max-width:90px;margin:0 auto 10px;">
+      <strong>2. Masaža</strong><p>Nježno se masira kružnim pokretima dok se gel ne upije.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/block-bg3.webp" alt="Redovna primjena" style="max-width:90px;margin:0 auto 10px;">
+      <strong>3. Ponavljanje</strong><p>Primjenjuje se 2 do 3 puta dnevno za kontinuirani osjećaj udobnosti.</p>
+    </div>
+    <div class="card-simple"><strong>Rezultat</strong><p>Postupno smanjenje ukočenosti i lakša svakodnevna pokretljivost.</p></div>
+  </div>
+</section>
+
+<!-- CONDIÇÕES TRATADAS -->
+<section class="section">
+  <h2>Koje nelagode Nautubone pokriva</h2>
+  <p class="lead">Pogodan za najčešća područja zglobne i mišićne nelagode.</p>
+  <div class="grid-cards" style="grid-template-columns:repeat(3,1fr);">
+    <div class="card-simple">
+      <img src="img/artrite_artrose.webp" alt="Artritis i artroza" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <strong>Artritis i artroza</strong><p>Smanjuje osjećaj ukočenosti i nelagode u zglobovima.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/bursite.webp" alt="Burzitis" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <strong>Burzitis</strong><p>Pomaže ublažiti osjetljivost u ramenu, kuku ili koljenu.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/cervicalgia.webp" alt="Cervikalna bol" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <strong>Cervikalna bol</strong><p>Pomaže opustiti napetost u području vrata.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/dor_forte.webp" alt="Lumbalna bol" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <strong>Lumbalna bol</strong><p>Podrška kod nelagode u donjem dijelu leđa.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/osteocondrose_osteoporose.webp" alt="Osteokondroza" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <strong>Osteokondroza</strong><p>Doprinosi osjećaju mišićne i zglobne udobnosti.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/sinovite.webp" alt="Sinovitis" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <strong>Sinovitis</strong><p>Pomaže smanjiti osjećaj oticanja u zglobovima.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTES -->
+<section class="section">
+  <h2>Prirodni sastav</h2>
+  <p class="lead">Pet biljnih aktivnih sastojaka u formuli gela.</p>
+  <div class="grid-cards" style="grid-template-columns:repeat(5,1fr);">
+    <div class="card-simple">
+      <img src="img/Symphytum_officinale.webp" alt="Gavez" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
+      <strong style="font-size:14px;">Gavez</strong>
+    </div>
+    <div class="card-simple">
+      <img src="img/Pelargonium_roseum.webp" alt="Ružino ulje" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
+      <strong style="font-size:14px;">Ružino ulje</strong>
+    </div>
+    <div class="card-simple">
+      <img src="img/Anthemis_nobilis.webp" alt="Rimska kamilica" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
+      <strong style="font-size:14px;">Rimska kamilica</strong>
+    </div>
+    <div class="card-simple">
+      <img src="img/Pelargonium_graveolens.webp" alt="Geranij" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
+      <strong style="font-size:14px;">Geranij</strong>
+    </div>
+    <div class="card-simple">
+      <img src="img/Salvia_sclarea.webp" alt="Kadulja" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
+      <strong style="font-size:14px;">Kadulja</strong>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section">
+  <h2>Kada osjetiti olakšanje</h2>
+  <div class="timeline">
+    <div class="card"><span class="when">Prve primjene</span><p>Osjećaj udobnosti i blagog opuštanja na zahvaćenom području.</p></div>
+    <div class="card"><span class="when">3-7 dana</span><p>Smanjenje jutarnje ukočenosti, lakše svakodnevne aktivnosti.</p></div>
+    <div class="card"><span class="when">2-4 tjedna</span><p>Stabilnija udobnost zglobova uz redovnu primjenu.</p></div>
+  </div>
+  <p class="lead" style="margin-top:16px;font-size:13px;">Rezultati mogu varirati ovisno o redovitosti primjene i individualnim čimbenicima.</p>
+</section>
+
+<!-- DEPOIMENTO / AUTORIDADE -->
+<section class="section">
+  <h2>Preporuka stručnjaka</h2>
+  <div class="expert-card">
+    <img src="img/doctor.webp" alt="Dr. Sergio Rinaldi" style="border-radius:50%;width:120px;height:120px;object-fit:cover;">
+    <div>
+      <p class="expert-name">Dr. Sergio Rinaldi</p>
+      <p class="expert-title">Specijalist reumatologije</p>
+      <p>Mnogi pacijenti s kroničnom nelagodom u zglobovima traže rješenje koje ne opterećuje probavni sustav. Lokalna primjena gela poput Nautubonea omogućava ciljano djelovanje upravo tamo gdje je potrebno, uz jednostavnu svakodnevnu rutinu.</p>
+      <p>Preporučujem redovnu primjenu 2-3 puta dnevno, uz blagu masažu, kao dio šire rutine brige o pokretljivosti.</p>
+      <img src="img/signature.webp" alt="Potpis" style="max-width:140px;margin-top:10px;">
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA O PEDIDO -->
+<section class="section">
+  <h2>Kako naručiti</h2>
+  <div class="grid-cards" style="grid-template-columns:repeat(3,1fr);">
+    <div class="card-simple">
+      <img src="img/order_step1.webp" alt="Popunite obrazac" style="max-width:120px;margin:0 auto 10px;">
+      <strong>1. Popunite obrazac</strong><p>Unesite ime i telefon u formular iznad.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/order_step2.webp" alt="Poziv operatera" style="max-width:120px;margin:0 auto 10px;">
+      <strong>2. Potvrda telefonom</strong><p>Naš operater zove radi potvrde narudžbe.</p>
+    </div>
+    <div class="card-simple">
+      <img src="img/order_step3.webp" alt="Dostava i plaćanje" style="max-width:120px;margin:0 auto 10px;">
+      <strong>3. Dostava</strong><p>Plaćate tek kada paket stigne na vašu adresu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DETALHES DO PRODUTO -->
+<section class="section">
+  <h2>Detalji proizvoda</h2>
+  <div class="grid-cards" style="grid-template-columns:1fr 1fr;align-items:center;">
+    <div class="card-simple"><img src="img/nautubone_promo_70.webp" alt="Nautubone gel" style="max-width:220px;margin:0 auto;"></div>
+    <div class="card-simple">
+      <img src="img/nautubone_back.webp" alt="Nautubone - sastav i upute" style="max-width:220px;margin:0 auto;">
+    </div>
+  </div>
+  <p class="lead" style="margin-top:10px;font-size:13px;">Količina po pakovanju: 100 ml. Sastav na bazi prirodnih biljnih ekstrakata, vidljiv na pakiranju.</p>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <h2>Često postavljana pitanja</h2>
+  <div class="faq-item"><strong>Je li plaćanje sigurno?</strong><p>Plaćate isključivo pri dostavi, izravno dostavljaču. Ne dijelite podatke kartice online.</p></div>
+  <div class="faq-item"><strong>Koliko traje dostava?</strong><p>Naš operater potvrđuje rok dostave telefonskim putem nakon narudžbe.</p></div>
+  <div class="faq-item"><strong>Za koja područja je pogodan?</strong><p>Koljena, ramena, leđa, laktove, šake i gležnjeve.</p></div>
+  <div class="faq-item"><strong>Što ako se ne javim na poziv operatera?</strong><p>Pokušat ćemo ponovno kontaktirati u drugom terminu kako bismo potvrdili narudžbu.</p></div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="form-container">
+  <div class="form-two-columns">
+    <div class="left-column" style="text-align:center;">
+      <div class="form-badge" id="form-badge-2"></div>
+      <h2 class="form-title" id="form-title-2"></h2>
+    </div>
+    <div class="right-column">
+      <div class="form-wrapper">
+        <a href="#formulario-oferta" class="cta-button" style="display:block;text-align:center;text-decoration:none;">
+          Naručite odmah
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="legal">
+  <p>Ovaj sadržaj je informativni oglas u komercijalne svrhe. Rezultati se mogu razlikovati od osobe do osobe. Informacije su edukativnog karaktera i ne zamjenjuju medicinski savjet. U slučaju trajnih simptoma, obratite se zdravstvenom stručnjaku.</p>
+  <p>© <span id="ano-atual"></span> <span class="produto-nome">Nautubone</span> — Sva prava pridržana.</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/tracking.js"></script>
+<script>
+  document.getElementById("ano-atual").textContent = new Date().getFullYear();
+  document.getElementById("form-badge-2").textContent = OFFER_CONFIG.textos.badgeOferta;
+  document.getElementById("form-title-2").textContent = OFFER_CONFIG.textos.tituloForm;
+</script>
+</body>
+</html>
