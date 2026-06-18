@@ -26,12 +26,13 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--texto); background: #fff; line-height: 1.6;
+  overflow-x: hidden;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 /* ── HEADER ─────────────────────────────────────── */
 .lp-header {
@@ -440,21 +441,48 @@ footer.legal {
 
 /* ── RESPONSIVE ──────────────────────────────────── */
 @media (max-width: 960px) {
-  .hero, .form-two-columns { grid-template-columns: 1fr; }
+  .hero, .form-two-columns { grid-template-columns: 1fr !important; }
   .form-two-columns .left-column { padding: 24px; }
-  .ingredients-layout { grid-template-columns: 1fr; }
-  .order-steps { grid-template-columns: 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr 1fr; }
-  .expert-card { grid-template-columns: 1fr; text-align: center; }
+  .ingredients-layout { grid-template-columns: 1fr !important; }
+  .order-steps { grid-template-columns: 1fr !important; }
+  .testimonials-grid { grid-template-columns: 1fr 1fr !important; }
+  .expert-card { grid-template-columns: 1fr !important; text-align: center; }
   .expert-card > img { margin: 0 auto; }
-  .order-trust-grid { grid-template-columns: 1fr; }
+  .order-trust-grid { grid-template-columns: 1fr 1fr !important; }
+  .grid-cards { grid-template-columns: 1fr 1fr !important; }
 }
+
 @media (max-width: 620px) {
   .hero h1 { font-size: 26px; }
-  .grid-cards { grid-template-columns: 1fr; }
-  .quick-facts { grid-template-columns: 1fr 1fr 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .trust-row { grid-template-columns: 1fr; }
-  .order-steps { grid-template-columns: 1fr; }
+  /* Força coluna única em TODOS os grids, inclusive os com inline style */
+  .grid-cards,
+  .grid-cards[style],
+  [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns:repeat(5"],
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  .quick-facts { grid-template-columns: repeat(3,1fr) !important; }
+  .testimonials-grid { grid-template-columns: 1fr !important; }
+  .trust-row { grid-template-columns: 1fr !important; }
+  .order-steps { grid-template-columns: 1fr !important; }
+  .order-trust-grid { grid-template-columns: 1fr !important; }
   .lp-header-promo { display: none; }
+  /* Evita overflow horizontal */
+  .section, .order-section, .ingredients-section {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+  .form-container { margin: 16px 12px !important; }
+  .carousel-img-wrap { width: 130px !important; height: 130px !important; }
+  .form-price-box .new { font-size: 36px !important; }
+  .expert-card { padding: 20px 16px; }
+  /* Imagens do produto não ultrapassam a tela */
+  .card-simple img, .order-step-img { max-width: 100% !important; width: auto !important; }
+}
+
+/* Garante que imagens com max-width inline não ultrapassem o viewport */
+@media (max-width: 480px) {
+  img[style*="max-width"] { max-width: 100% !important; }
+  .hero .product-pulse { max-width: 220px !important; }
 }
