@@ -2,28 +2,62 @@
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
-<title>Nautubone - Udobnost za vaše zglobove</title>
+<title>Nautubone – Udobnost za vaše zglobove | Službena ponuda</title>
+<meta name="description" content="Nautubone gel djeluje izravno na zglobnu nelagodu – smanjuje ukočenost, podržava pokretljivost i vraća radost svakodnevnih aktivnosti. Plaćanje pouzećem.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ══ HEADER BRAND BAR ══════════════════════════════ -->
+<header class="lp-header" role="banner">
+  <div class="lp-wrap">
+    <div class="lp-left">
+      <strong class="lp-brand">Nautubone</strong>
+      <span class="lp-chip">Izvorni proizvod</span>
+    </div>
+    <div class="lp-right">
+      <div class="lp-promo" aria-label="Trenutna promocija">
+        <span class="lp-off">-70%</span>
+        <span class="lp-price" id="header-price">Posebna ponuda</span>
+      </div>
+      <a href="#formulario-oferta" class="lp-cta">Narudžba</a>
+    </div>
+  </div>
+</header>
+
+<!-- ══ STICKY BAR ════════════════════════════════════ -->
 <div class="lp-sticky">
   Posebna ponuda: <span id="price-old-value-sticky"></span> sada <span id="price-new-value-sticky"></span> • Plaćanje pri dostavi
 </div>
 
-<!-- HERO -->
+<!-- ══ HERO ══════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-col-left">
     <h1><span class="produto-nome destaque">Nautubone</span> – udobnost za vaše zglobove, bez čekanja</h1>
     <p class="sub">Gel koji djeluje izravno na područje nelagode: smanjuje ukočenost, podržava pokretljivost i vraća vam radost svakodnevnih aktivnosti.</p>
 
     <ul class="beneficios">
-      <li>✓ Smanjuje osjećaj ukočenosti u zglobovima</li>
-      <li>✓ Podržava pokretljivost koljena, ramena i leđa</li>
-      <li>✓ Sastav na bazi prirodnih biljnih ekstrakata</li>
-      <li>✓ Brzo se upija, ne ostavlja masne tragove</li>
-      <li>✓ Pogodan za svakodnevnu primjenu</li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="#15B093" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Smanjuje osjećaj ukočenosti u zglobovima
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="#15B093" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Podržava pokretljivost koljena, ramena i leđa
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="#15B093" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Sastav na bazi prirodnih biljnih ekstrakata
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="#15B093" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Brzo se upija, ne ostavlja masne tragove
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="#15B093" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Pogodan za svakodnevnu primjenu
+      </li>
     </ul>
 
     <div class="quick-facts">
@@ -38,19 +72,24 @@
       <div id="price-old-value"></div>
       <div id="price-new-value"></div>
       <div id="price-discount-value"></div>
+      <div class="secure-row">
+        <div class="secure-item">🔒 Sigurna kupnja</div>
+        <div class="secure-item">🚚 Brza dostava</div>
+        <div class="secure-item">✅ Zadovoljstvo zajamčeno</div>
+      </div>
     </div>
-    <img class="product-img-front" src="img/nautubone_front.webp" alt="Nautubone gel" style="max-width:260px;margin:16px auto 0;">
+    <img class="product-img-front" src="img/nautubone_front.webp" alt="Nautubone gel" style="max-width:240px;margin:16px auto 0;">
   </div>
 </section>
 
-<!-- FORMULÁRIO -->
+<!-- ══ FORMULÁRIO ════════════════════════════════════ -->
 <div class="form-container" id="formulario-oferta">
   <div class="form-two-columns">
     <div class="left-column" style="text-align:center;">
       <div class="form-badge" id="form-badge"></div>
       <h2 class="form-title" id="form-title"></h2>
       <p class="form-subtitle" id="form-subtitle"></p>
-      <img class="product-img-front" src="img/nautubone_front.webp" alt="Nautubone gel" style="max-width:200px;margin:0 auto;">
+      <img class="product-img-front" src="img/nautubone_front.webp" alt="Nautubone gel" style="max-width:190px;margin:0 auto;">
     </div>
 
     <div class="right-column">
@@ -78,7 +117,7 @@
             <small class="form-help" id="ajuda-telefone"></small>
           </div>
 
-          <button type="submit" class="cta-button"><span id="cta-button-text"></span></button>
+          <button type="submit" class="cta-button" id="submit-btn"><span id="cta-button-text"></span></button>
         </form>
 
         <div class="payment-info">
@@ -89,154 +128,197 @@
   </div>
 </div>
 
-<!-- MECANISMO -->
+<!-- ══ MECANISMO ═════════════════════════════════════ -->
 <section class="section">
   <h2>Kako <span class="produto-nome">Nautubone</span> djeluje</h2>
+  <div class="section-divider"></div>
   <p class="lead">Formula kombinira biljne ekstrakte poznate po umirujućem djelovanju na zglobove i mišiće, uz brzu apsorpciju kroz kožu.</p>
-  <div class="grid-cards">
+  <div class="grid-cards" style="grid-template-columns:repeat(4,1fr);">
     <div class="card-simple">
-      <img src="img/htu-item1.webp" alt="Nanošenje gela" style="max-width:90px;margin:0 auto 10px;">
-      <strong>1. Nanošenje</strong><p>Mala količina gela (veličine novčića) nanosi se na zahvaćeno područje.</p>
+      <img src="img/htu-item1.webp" alt="Nanošenje gela" style="max-width:80px;margin:0 auto 12px;border-radius:50%;">
+      <div class="step-number">1</div>
+      <strong>Nanošenje</strong><p>Mala količina gela (veličine novčića) nanosi se na zahvaćeno područje.</p>
     </div>
     <div class="card-simple">
-      <img src="img/htu-item2.webp" alt="Masaža gela" style="max-width:90px;margin:0 auto 10px;">
-      <strong>2. Masaža</strong><p>Nježno se masira kružnim pokretima dok se gel ne upije.</p>
+      <img src="img/htu-item2.webp" alt="Masaža gela" style="max-width:80px;margin:0 auto 12px;border-radius:50%;">
+      <div class="step-number">2</div>
+      <strong>Masaža</strong><p>Nježno se masira kružnim pokretima dok se gel ne upije.</p>
     </div>
     <div class="card-simple">
-      <img src="img/block-bg3.webp" alt="Redovna primjena" style="max-width:90px;margin:0 auto 10px;">
-      <strong>3. Ponavljanje</strong><p>Primjenjuje se 2 do 3 puta dnevno za kontinuirani osjećaj udobnosti.</p>
+      <img src="img/block-bg3.webp" alt="Redovna primjena" style="max-width:80px;margin:0 auto 12px;border-radius:50%;">
+      <div class="step-number">3</div>
+      <strong>Ponavljanje</strong><p>Primjenjuje se 2 do 3 puta dnevno za kontinuirani osjećaj udobnosti.</p>
     </div>
-    <div class="card-simple"><strong>Rezultat</strong><p>Postupno smanjenje ukočenosti i lakša svakodnevna pokretljivost.</p></div>
+    <div class="card-simple" style="background:linear-gradient(135deg,#e8f8f4,#f0fbf8);border-color:#b0ddd4;">
+      <div style="font-size:36px;margin:8px auto 12px;">✅</div>
+      <strong>Rezultat</strong><p>Postupno smanjenje ukočenosti i lakša svakodnevna pokretljivost.</p>
+    </div>
   </div>
 </section>
 
-<!-- CONDIÇÕES TRATADAS -->
-<section class="section">
+<!-- ══ CONDIÇÕES TRATADAS ═════════════════════════════ -->
+<section class="section" style="background:linear-gradient(135deg,#f0fbf8,#fff);border-radius:24px;margin:0 auto 8px;">
   <h2>Koje nelagode Nautubone pokriva</h2>
+  <div class="section-divider"></div>
   <p class="lead">Pogodan za najčešća područja zglobne i mišićne nelagode.</p>
   <div class="grid-cards" style="grid-template-columns:repeat(3,1fr);">
     <div class="card-simple">
-      <img src="img/artrite_artrose.webp" alt="Artritis i artroza" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <img src="img/artrite_artrose.webp" alt="Artritis i artroza" style="max-width:100px;border-radius:50%;margin:0 auto 12px;border:3px solid #c5e8e0;">
       <strong>Artritis i artroza</strong><p>Smanjuje osjećaj ukočenosti i nelagode u zglobovima.</p>
     </div>
     <div class="card-simple">
-      <img src="img/bursite.webp" alt="Burzitis" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <img src="img/bursite.webp" alt="Burzitis" style="max-width:100px;border-radius:50%;margin:0 auto 12px;border:3px solid #c5e8e0;">
       <strong>Burzitis</strong><p>Pomaže ublažiti osjetljivost u ramenu, kuku ili koljenu.</p>
     </div>
     <div class="card-simple">
-      <img src="img/cervicalgia.webp" alt="Cervikalna bol" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <img src="img/cervicalgia.webp" alt="Cervikalna bol" style="max-width:100px;border-radius:50%;margin:0 auto 12px;border:3px solid #c5e8e0;">
       <strong>Cervikalna bol</strong><p>Pomaže opustiti napetost u području vrata.</p>
     </div>
     <div class="card-simple">
-      <img src="img/dor_forte.webp" alt="Lumbalna bol" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <img src="img/dor_forte.webp" alt="Lumbalna bol" style="max-width:100px;border-radius:50%;margin:0 auto 12px;border:3px solid #c5e8e0;">
       <strong>Lumbalna bol</strong><p>Podrška kod nelagode u donjem dijelu leđa.</p>
     </div>
     <div class="card-simple">
-      <img src="img/osteocondrose_osteoporose.webp" alt="Osteokondroza" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <img src="img/osteocondrose_osteoporose.webp" alt="Osteokondroza" style="max-width:100px;border-radius:50%;margin:0 auto 12px;border:3px solid #c5e8e0;">
       <strong>Osteokondroza</strong><p>Doprinosi osjećaju mišićne i zglobne udobnosti.</p>
     </div>
     <div class="card-simple">
-      <img src="img/sinovite.webp" alt="Sinovitis" style="max-width:110px;border-radius:50%;margin:0 auto 10px;">
+      <img src="img/sinovite.webp" alt="Sinovitis" style="max-width:100px;border-radius:50%;margin:0 auto 12px;border:3px solid #c5e8e0;">
       <strong>Sinovitis</strong><p>Pomaže smanjiti osjećaj oticanja u zglobovima.</p>
     </div>
   </div>
 </section>
 
-<!-- INGREDIENTES -->
+<!-- ══ INGREDIENTES ═══════════════════════════════════ -->
 <section class="section">
   <h2>Prirodni sastav</h2>
+  <div class="section-divider"></div>
   <p class="lead">Pet biljnih aktivnih sastojaka u formuli gela.</p>
   <div class="grid-cards" style="grid-template-columns:repeat(5,1fr);">
     <div class="card-simple">
-      <img src="img/Symphytum_officinale.webp" alt="Gavez" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
-      <strong style="font-size:14px;">Gavez</strong>
+      <img src="img/Symphytum_officinale.webp" alt="Gavez" style="max-width:75px;border-radius:50%;margin:0 auto 10px;border:3px solid #c5e8e0;">
+      <strong style="font-size:13px;">Gavez</strong>
     </div>
     <div class="card-simple">
-      <img src="img/Pelargonium_roseum.webp" alt="Ružino ulje" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
-      <strong style="font-size:14px;">Ružino ulje</strong>
+      <img src="img/Pelargonium_roseum.webp" alt="Ružino ulje" style="max-width:75px;border-radius:50%;margin:0 auto 10px;border:3px solid #c5e8e0;">
+      <strong style="font-size:13px;">Ružino ulje</strong>
     </div>
     <div class="card-simple">
-      <img src="img/Anthemis_nobilis.webp" alt="Rimska kamilica" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
-      <strong style="font-size:14px;">Rimska kamilica</strong>
+      <img src="img/Anthemis_nobilis.webp" alt="Rimska kamilica" style="max-width:75px;border-radius:50%;margin:0 auto 10px;border:3px solid #c5e8e0;">
+      <strong style="font-size:13px;">Rimska kamilica</strong>
     </div>
     <div class="card-simple">
-      <img src="img/Pelargonium_graveolens.webp" alt="Geranij" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
-      <strong style="font-size:14px;">Geranij</strong>
+      <img src="img/Pelargonium_graveolens.webp" alt="Geranij" style="max-width:75px;border-radius:50%;margin:0 auto 10px;border:3px solid #c5e8e0;">
+      <strong style="font-size:13px;">Geranij</strong>
     </div>
     <div class="card-simple">
-      <img src="img/Salvia_sclarea.webp" alt="Kadulja" style="max-width:80px;border-radius:50%;margin:0 auto 8px;">
-      <strong style="font-size:14px;">Kadulja</strong>
+      <img src="img/Salvia_sclarea.webp" alt="Kadulja" style="max-width:75px;border-radius:50%;margin:0 auto 10px;border:3px solid #c5e8e0;">
+      <strong style="font-size:13px;">Kadulja</strong>
     </div>
   </div>
 </section>
 
-<!-- TIMELINE -->
+<!-- ══ TIMELINE ═══════════════════════════════════════ -->
 <section class="section">
   <h2>Kada osjetiti olakšanje</h2>
+  <div class="section-divider"></div>
   <div class="timeline">
     <div class="card"><span class="when">Prve primjene</span><p>Osjećaj udobnosti i blagog opuštanja na zahvaćenom području.</p></div>
-    <div class="card"><span class="when">3-7 dana</span><p>Smanjenje jutarnje ukočenosti, lakše svakodnevne aktivnosti.</p></div>
-    <div class="card"><span class="when">2-4 tjedna</span><p>Stabilnija udobnost zglobova uz redovnu primjenu.</p></div>
+    <div class="card"><span class="when">3–7 dana</span><p>Smanjenje jutarnje ukočenosti, lakše svakodnevne aktivnosti.</p></div>
+    <div class="card"><span class="when">2–4 tjedna</span><p>Stabilnija udobnost zglobova uz redovnu primjenu.</p></div>
   </div>
-  <p class="lead" style="margin-top:16px;font-size:13px;">Rezultati mogu varirati ovisno o redovitosti primjene i individualnim čimbenicima.</p>
+  <p class="lead" style="margin-top:18px;font-size:12px;">Rezultati mogu varirati ovisno o redovitosti primjene i individualnim čimbenicima.</p>
 </section>
 
-<!-- DEPOIMENTO / AUTORIDADE -->
+<!-- ══ AUTORIDADE ════════════════════════════════════ -->
 <section class="section">
   <h2>Preporuka stručnjaka</h2>
+  <div class="section-divider"></div>
   <div class="expert-card">
     <img src="img/doctor.webp" alt="Dr. Sergio Rinaldi" style="border-radius:50%;width:120px;height:120px;object-fit:cover;">
     <div>
       <p class="expert-name">Dr. Sergio Rinaldi</p>
       <p class="expert-title">Specijalist reumatologije</p>
       <p>Mnogi pacijenti s kroničnom nelagodom u zglobovima traže rješenje koje ne opterećuje probavni sustav. Lokalna primjena gela poput Nautubonea omogućava ciljano djelovanje upravo tamo gdje je potrebno, uz jednostavnu svakodnevnu rutinu.</p>
-      <p>Preporučujem redovnu primjenu 2-3 puta dnevno, uz blagu masažu, kao dio šire rutine brige o pokretljivosti.</p>
-      <img src="img/signature.webp" alt="Potpis" style="max-width:140px;margin-top:10px;">
+      <p style="margin-top:10px;">Preporučujem redovnu primjenu 2–3 puta dnevno, uz blagu masažu, kao dio šire rutine brige o pokretljivosti.</p>
+      <img src="img/signature.webp" alt="Potpis" style="max-width:130px;margin-top:12px;">
     </div>
   </div>
 </section>
 
-<!-- COMO FUNCIONA O PEDIDO -->
+<!-- ══ KAKO NARUČITI ══════════════════════════════════ -->
 <section class="section">
   <h2>Kako naručiti</h2>
+  <div class="section-divider"></div>
   <div class="grid-cards" style="grid-template-columns:repeat(3,1fr);">
     <div class="card-simple">
-      <img src="img/order_step1.webp" alt="Popunite obrazac" style="max-width:120px;margin:0 auto 10px;">
-      <strong>1. Popunite obrazac</strong><p>Unesite ime i telefon u formular iznad.</p>
+      <img src="img/order_step1.webp" alt="Popunite obrazac" style="max-width:110px;margin:0 auto 10px;">
+      <div class="step-number">1</div>
+      <strong>Popunite obrazac</strong><p>Unesite ime i telefon u formular iznad.</p>
     </div>
     <div class="card-simple">
-      <img src="img/order_step2.webp" alt="Poziv operatera" style="max-width:120px;margin:0 auto 10px;">
-      <strong>2. Potvrda telefonom</strong><p>Naš operater zove radi potvrde narudžbe.</p>
+      <img src="img/order_step2.webp" alt="Poziv operatera" style="max-width:110px;margin:0 auto 10px;">
+      <div class="step-number">2</div>
+      <strong>Potvrda telefonom</strong><p>Naš operater zove radi potvrde narudžbe.</p>
     </div>
     <div class="card-simple">
-      <img src="img/order_step3.webp" alt="Dostava i plaćanje" style="max-width:120px;margin:0 auto 10px;">
-      <strong>3. Dostava</strong><p>Plaćate tek kada paket stigne na vašu adresu.</p>
+      <img src="img/order_step3.webp" alt="Dostava i plaćanje" style="max-width:110px;margin:0 auto 10px;">
+      <div class="step-number">3</div>
+      <strong>Dostava</strong><p>Plaćate tek kada paket stigne na vašu adresu.</p>
     </div>
   </div>
 </section>
 
-<!-- DETALHES DO PRODUTO -->
+<!-- ══ DETALJI PROIZVODA ══════════════════════════════ -->
 <section class="section">
   <h2>Detalji proizvoda</h2>
+  <div class="section-divider"></div>
   <div class="grid-cards" style="grid-template-columns:1fr 1fr;align-items:center;">
-    <div class="card-simple"><img src="img/nautubone_promo_70.webp" alt="Nautubone gel" style="max-width:220px;margin:0 auto;"></div>
-    <div class="card-simple">
-      <img src="img/nautubone_back.webp" alt="Nautubone - sastav i upute" style="max-width:220px;margin:0 auto;">
-    </div>
+    <div class="card-simple"><img src="img/nautubone_promo_70.webp" alt="Nautubone gel" style="max-width:210px;margin:0 auto;"></div>
+    <div class="card-simple"><img src="img/nautubone_back.webp" alt="Nautubone – sastav i upute" style="max-width:210px;margin:0 auto;"></div>
   </div>
-  <p class="lead" style="margin-top:10px;font-size:13px;">Količina po pakovanju: 100 ml. Sastav na bazi prirodnih biljnih ekstrakata, vidljiv na pakiranju.</p>
+  <p class="lead" style="margin-top:12px;font-size:13px;">Količina po pakovanju: 100 ml. Sastav na bazi prirodnih biljnih ekstrakata, vidljiv na pakiranju.</p>
 </section>
 
-<!-- FAQ -->
+<!-- ══ FAQ ACCORDION ══════════════════════════════════ -->
 <section class="section">
   <h2>Često postavljana pitanja</h2>
-  <div class="faq-item"><strong>Je li plaćanje sigurno?</strong><p>Plaćate isključivo pri dostavi, izravno dostavljaču. Ne dijelite podatke kartice online.</p></div>
-  <div class="faq-item"><strong>Koliko traje dostava?</strong><p>Naš operater potvrđuje rok dostave telefonskim putem nakon narudžbe.</p></div>
-  <div class="faq-item"><strong>Za koja područja je pogodan?</strong><p>Koljena, ramena, leđa, laktove, šake i gležnjeve.</p></div>
-  <div class="faq-item"><strong>Što ako se ne javim na poziv operatera?</strong><p>Pokušat ćemo ponovno kontaktirati u drugom terminu kako bismo potvrdili narudžbu.</p></div>
+  <div class="section-divider"></div>
+
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      Je li plaćanje sigurno?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">Plaćate isključivo pri dostavi, izravno dostavljaču. Ne dijelite podatke kartice online.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      Koliko traje dostava?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">Naš operater potvrđuje rok dostave telefonskim putem nakon narudžbe.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      Za koja područja je pogodan?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">Koljena, ramena, leđa, laktove, šake i gležnjeve.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      Što ako se ne javim na poziv operatera?
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">Pokušat ćemo ponovno kontaktirati u drugom terminu kako bismo potvrdili narudžbu.</div>
+  </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- ══ CTA FINAL ══════════════════════════════════════ -->
 <div class="form-container">
   <div class="form-two-columns">
     <div class="left-column" style="text-align:center;">
@@ -248,6 +330,10 @@
         <a href="#formulario-oferta" class="cta-button" style="display:block;text-align:center;text-decoration:none;">
           Naručite odmah
         </a>
+        <div class="secure-row" style="margin-top:12px;">
+          <div class="secure-item">🔒 Sigurna kupnja</div>
+          <div class="secure-item">🚚 Besplatna dostava</div>
+        </div>
       </div>
     </div>
   </div>
@@ -255,16 +341,62 @@
 
 <footer class="legal">
   <p>Ovaj sadržaj je informativni oglas u komercijalne svrhe. Rezultati se mogu razlikovati od osobe do osobe. Informacije su edukativnog karaktera i ne zamjenjuju medicinski savjet. U slučaju trajnih simptoma, obratite se zdravstvenom stručnjaku.</p>
-  <p>© <span id="ano-atual"></span> <span class="produto-nome">Nautubone</span> — Sva prava pridržana.</p>
+  <p style="margin-top:8px;">© <span id="ano-atual"></span> <span class="produto-nome">Nautubone</span> — Sva prava pridržana.</p>
 </footer>
 
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
 <script src="js/tracking.js"></script>
 <script>
+  // Ano e textos dinâmicos
   document.getElementById("ano-atual").textContent = new Date().getFullYear();
   document.getElementById("form-badge-2").textContent = OFFER_CONFIG.textos.badgeOferta;
   document.getElementById("form-title-2").textContent = OFFER_CONFIG.textos.tituloForm;
+
+  // ── FAQ ACCORDION ──────────────────────────────────
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Fecha todos
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      // Abre o clicado (se estava fechado)
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ── SCROLL SUAVE para âncoras ──────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ── ANIMAÇÕES DE ENTRADA (IntersectionObserver) ────
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll(
+      '.section, .form-container, .card-simple, .timeline div.card, .faq-item'
+    ).forEach(el => obs.observe(el));
+  }
 </script>
 </body>
 </html>
