@@ -4,7 +4,7 @@
 
 1. No painel da Vercel, vá em **Project Settings > Environment Variables**.
 2. Adicione:
-   - **Nome:** `TERRALEADS_API_KEY`
+   - **Nome:** `c66289394c2a6e8515c8e8b382fba719`
    - **Valor:** sua chave de API da TerraLeads para essa conta/plataforma de anúncio
 3. Salve e faça o deploy (ou redeploy se já tinha subido sem a variável).
 
