@@ -46,6 +46,10 @@
         return false;
       }
 
+      // Save to localStorage
+      if (nameInput) localStorage.setItem("lead_name", nameInput.value.trim());
+      if (phoneInput) localStorage.setItem("lead_phone", phoneInput.value.trim());
+
       const btn = form.querySelector(".cta-button");
       if (btn) {
         btn.disabled = true;

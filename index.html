@@ -284,7 +284,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">Nakon dvije sedmice primjene osjetila sam veliku razliku u jutarnjoj ukočenosti koljena. Konačno mogu hodati niz stepenice bez straha.</p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar">M</div>
+        <img class="testimonial-avatar" src="img/avatar_marija.png" alt="Marija">
         <div><div class="testimonial-name">Marija, 54</div><div class="testimonial-result">Koljena – 2 tjedna primjene</div></div>
       </div>
     </div>
@@ -292,7 +292,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">Radim cijeli dan stojeći i bol u leđima me pratila godinama. Gel mi je postao dio jutarnje rutine, osjećaj olakšanja je stvaran.</p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar">I</div>
+        <img class="testimonial-avatar" src="img/avatar_ivan.png" alt="Ivan">
         <div><div class="testimonial-name">Ivan, 47</div><div class="testimonial-result">Leđa – 3 tjedna primjene</div></div>
       </div>
     </div>
@@ -300,7 +300,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">Bila sam skeptična jer sam probala nekoliko drugih proizvoda bez rezultata. Ovaj se brzo upija i stvarno osjetim razliku navečer.</p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar">A</div>
+        <img class="testimonial-avatar" src="img/avatar_ana.png" alt="Ana">
         <div><div class="testimonial-name">Ana, 61</div><div class="testimonial-result">Ramena – 1 mjesec primjene</div></div>
       </div>
     </div>
@@ -308,7 +308,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">Vrat mi je bio konstantno napet od posla za računalom. Nakon nekoliko dana primjene osjećam puno manje napetosti pri kraju dana.</p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar">P</div>
+        <img class="testimonial-avatar" src="img/avatar_petar.png" alt="Petar">
         <div><div class="testimonial-name">Petar, 39</div><div class="testimonial-result">Vrat – 10 dana primjene</div></div>
       </div>
     </div>
@@ -316,7 +316,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">Ne ostavlja masne tragove i miris je jako blag, što mi je bilo važno jer radim s ljudima. Učinak osjetim već nakon nanošenja.</p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar">S</div>
+        <img class="testimonial-avatar" src="img/avatar_sanja.png" alt="Sanja">
         <div><div class="testimonial-name">Sanja, 58</div><div class="testimonial-result">Šake i zapešća – 2 tjedna primjene</div></div>
       </div>
     </div>
@@ -324,7 +324,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">Dostava je bila brza i plaćanje pri preuzimanju mi je dalo sigurnost da naručim. Proizvod je ispunio očekivanja.</p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar">T</div>
+        <img class="testimonial-avatar" src="img/avatar_tomislav.png" alt="Tomislav">
         <div><div class="testimonial-name">Tomislav, 63</div><div class="testimonial-result">Gležnjevi – 3 tjedna primjene</div></div>
       </div>
     </div>
@@ -596,6 +596,11 @@
     if(!frm) return;
     frm.addEventListener("submit", function(e){
       e.preventDefault();
+      const nameInput = frm.querySelector("input[name='name']");
+      const phoneInput = frm.querySelector("input[name='phone']");
+      if(nameInput) localStorage.setItem("lead_name", nameInput.value.trim());
+      if(phoneInput) localStorage.setItem("lead_phone", phoneInput.value.trim());
+
       const btn = frm.querySelector(".cta-button");
       btn.disabled = true; btn.textContent = "Slanje...";
       const fd = new FormData(frm);

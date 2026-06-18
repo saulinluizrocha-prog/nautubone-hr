@@ -2,30 +2,268 @@
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
-<title>Narudžba zaprimljena</title>
+<title>Narudžba zaprimljena - Nautubone</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  body {
+    background: var(--fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .success-container {
+    max-width: 580px;
+    width: 100%;
+    background: var(--branco);
+    border: 2px solid var(--borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--sombra-lg);
+    padding: 36px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .success-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .success-circle {
+    width: 72px;
+    height: 72px;
+    background: var(--verde-light);
+    border: 3px solid var(--verde);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde);
+    font-size: 36px;
+    font-weight: bold;
+    animation: successPulse 2s infinite ease-in-out;
+  }
+
+  @keyframes successPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(21, 176, 147, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(21, 176, 147, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(21, 176, 147, 0); }
+  }
+
+  .success-title {
+    color: var(--verde-dark);
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .lead-data-card {
+    background: var(--fundo);
+    border: 1.5px solid var(--borda);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    text-align: left;
+    display: none; /* Shown dynamically via JS if details exist */
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .lead-data-card h4 {
+    font-size: 14px;
+    color: var(--texto-claro);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .lead-data-row {
+    font-size: 14px;
+    color: var(--texto);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lead-data-row strong {
+    font-weight: 700;
+  }
+
+  .scarcity-warning-box {
+    background: #fff8eb;
+    border: 1.5px solid #ffe8cc;
+    border-radius: var(--radius-md);
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+    animation: warningPulse 3s infinite alternate;
+  }
+
+  @keyframes warningPulse {
+    0% { border-color: #ffe8cc; box-shadow: 0 2px 8px rgba(245, 166, 35, 0.05); }
+    100% { border-color: #ffd8a8; box-shadow: 0 2px 14px rgba(245, 166, 35, 0.15); }
+  }
+
+  .scarcity-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .scarcity-text {
+    font-size: 14px;
+    color: #a05e03;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .specialist-box {
+    background: var(--verde-light);
+    border: 1.5px solid var(--borda);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .specialist-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .specialist-text {
+    font-size: 14px;
+    color: var(--verde-dark);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .whatsapp-share-btn {
+    background: #25D366;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .whatsapp-share-btn:hover {
+    background: #20ba59;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  }
+
+  .whatsapp-share-btn:active {
+    transform: translateY(0);
+  }
+
+  .whatsapp-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+  }
+
+  .legal {
+    max-width: 580px;
+    text-align: center;
+    color: #7a7a7a;
+    font-size: 12px;
+    margin-top: auto;
+  }
+</style>
 </head>
 <body>
 
-<section class="section" style="text-align:center; padding-top:60px;">
-  <h2 style="color:var(--cor-principal);">Narudžba je uspješno zaprimljena!</h2>
-  <p class="lead">
-    Naš operater će vas uskoro nazvati radi potvrde podataka i adrese dostave.
-    Molimo držite telefon pri ruci.
-  </p>
-  <div class="card-simple" style="max-width:420px;margin:24px auto;">
-    <strong>Što slijedi</strong>
-    <p>1. Potvrda putem telefona<br>2. Priprema narudžbe<br>3. Dostava uz plaćanje pri preuzimanju</p>
+<main class="success-container">
+  <!-- ÍCONE E TÍTULO -->
+  <div class="success-icon-wrap">
+    <div class="success-circle">✓</div>
   </div>
-</section>
+  <h2 class="success-title">Narudžba uspješno zaprimljena!</h2>
+
+  <!-- CONFIRMAÇÃO DE DADOS DO LEAD -->
+  <div class="lead-data-card" id="lead-card">
+    <h4>Potvrđeni podaci za kontakt:</h4>
+    <div class="lead-data-row">
+      <span>Ime i prezime:</span>
+      <strong id="lead-name">-</strong>
+    </div>
+    <div class="lead-data-row">
+      <span>Broj telefona:</span>
+      <strong id="lead-phone">-</strong>
+    </div>
+  </div>
+
+  <!-- AVISO DE ESCASSEZ -->
+  <div class="scarcity-warning-box">
+    <span class="scarcity-icon">⚠️</span>
+    <span class="scarcity-text">PAŽNJA: Razine zaliha su trenutno niske. Pripazite na svoj mobilni telefon kako ne biste propustili ovu ponudu!</span>
+  </div>
+
+  <!-- INFORMAÇÃO DOS ESPECIALISTAS -->
+  <div class="specialist-box">
+    <span class="specialist-icon">📞</span>
+    <span class="specialist-text">U roku od nekoliko minuta naši stručnjaci će vas kontaktirati kako bi kreirali vaš personalizirani plan tretmana.</span>
+  </div>
+
+  <!-- BOTÃO WHATSAPP SHARE -->
+  <a href="https://wa.me/?text=Bok!%20Prona%C5%A1ao%20sam%20odli%C4%8Dan%20prirodni%20gel%20za%20zglobove%20Nautubone%20s%2050%25%20popusta.%20Meni%20je%20stvarno%20pomogao%20s%20bolovima%2C%20baci%20pogled%20ovdje%3A%20https%3A%2F%2Fnautubone-hr.vercel.app%2F" 
+     target="_blank" 
+     class="whatsapp-share-btn" 
+     id="wa-btn">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+      <path d="M12.031 2C6.479 2 2 6.477 2 12.029c0 1.911.533 3.696 1.459 5.234L2 22l4.908-1.428c1.458.847 3.141 1.457 4.887 1.457 5.58 0 10.236-4.478 10.236-10.029C22.031 6.477 17.582 2 12.031 2zm6.759 13.918c-.251.704-1.458 1.282-1.996 1.373-.503.085-1.157.141-3.197-.704-2.607-1.077-4.277-3.729-4.407-3.904-.131-.176-1.047-1.391-1.047-2.656 0-1.266.657-1.888.892-2.138.236-.251.523-.311.696-.311.173 0 .346.002.502.01.162.008.38-.031.594.484.221.531.758 1.849.824 1.981.066.133.11.289.02.467-.09.178-.135.289-.271.444-.136.156-.285.348-.407.467-.136.13-.277.271-.12.542.157.271.698 1.15 1.5 1.866.938.835 1.728 1.092 1.974 1.214.246.121.391.103.535-.06.146-.164.624-.727.791-.973.167-.246.335-.206.565-.121.23.085 1.458.687 1.71 1.201.251.515.251.859.126 1.562z"/>
+    </svg>
+    <span>Ako vam se svidjela ova ponuda, podijelite je s prijateljima!</span>
+  </a>
+</main>
 
 <footer class="legal">
-  <p>© <span id="ano-atual"></span> Sva prava pridržana.</p>
+  <p>Ovaj sadržaj je informativni oglas u komercijalne svrhe. Rezultati se mogu razlikovati od osobe do osobe. Informacije su edukativnog karaktera i ne zamjenjuju medicinski savjet. U slučaju trajnih simptoma, obratite se zdravstvenom stručnjaku.</p>
+  <p style="margin-top:8px;">© <span id="ano-atual"></span> Nautubone — Sva prava pridržana.</p>
 </footer>
 
 <script>
   document.getElementById("ano-atual").textContent = new Date().getFullYear();
+
+  // Tenta carregar os dados salvos pelo lead no formulário
+  try {
+    const name = localStorage.getItem("lead_name");
+    const phone = localStorage.getItem("lead_phone");
+
+    if (phone) {
+      document.getElementById("lead-name").textContent = name || "Kupac";
+      document.getElementById("lead-phone").textContent = phone;
+      document.getElementById("lead-card").style.display = "flex";
+    }
+  } catch (e) {
+    console.error("Erro ao ler localStorage:", e);
+  }
 </script>
 </body>
 </html>

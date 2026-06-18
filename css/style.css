@@ -329,9 +329,9 @@ img { max-width: 100%; height: auto; display: block; }
 .testimonial-text { font-size: 14px; color: var(--texto-claro); line-height: 1.65; margin-bottom: 16px; font-style: italic; }
 .testimonial-author { display: flex; align-items: center; gap: 10px; }
 .testimonial-avatar {
-  width: 40px; height: 40px; border-radius: 50%; background: var(--verde);
-  color: #fff; display: flex; align-items: center; justify-content: center;
-  font-weight: 900; font-size: 18px; flex-shrink: 0;
+  width: 40px; height: 40px; border-radius: 50%;
+  object-fit: cover; border: 1.5px solid var(--borda);
+  flex-shrink: 0;
 }
 .testimonial-name { font-weight: 800; font-size: 14px; }
 .testimonial-result { font-size: 12px; color: var(--verde); font-weight: 700; }
