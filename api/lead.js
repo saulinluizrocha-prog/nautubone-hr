@@ -16,7 +16,7 @@ const crypto = require("crypto");
 // ---------- DADOS FIXOS DESTA OFERTA ----------
 // Estes dois você só muda se trocar de oferta/produto na TerraLeads.
 const OFFER_ID = "8245";
-const STREAM_ID = "vCQn";
+const STREAM_CODE = "vCQn"; // code de tracking (não é stream_id numérico)
 const USER_ID = "75329"; // ID de afiliado TerraLeads (confirme se mudar de conta)
 const API_DOMAIN = "https://t-api.org";
 const DEFAULT_COUNTRY = "HR";
@@ -72,7 +72,6 @@ module.exports = async function handler(req, res) {
     name: String(body.name).trim(),
     phone: String(body.phone).trim(),
     offer_id: OFFER_ID,
-    stream_id: STREAM_ID,
     country: body.country || DEFAULT_COUNTRY,
     region: body.region || null,
     city: body.city || null,
